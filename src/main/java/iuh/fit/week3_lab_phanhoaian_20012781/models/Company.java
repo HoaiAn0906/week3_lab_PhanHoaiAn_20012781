@@ -22,7 +22,8 @@ public class Company {
     private String about;
     private String email;
     private String password;
-    private String comp_name;
+    @Column(name = "comp_name")
+    private String compName;
     private String phone;
     @Column(name = "web_url")
     private String webUrl;
@@ -32,14 +33,4 @@ public class Company {
     @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY,mappedBy = "company")
     @JsonIgnore
     private List<Job> jobs;
-
-    public Company(String about, String email, String password, String comp_name, String phone, String webUrl, Address address) {
-        this.about = about;
-        this.email = email;
-        this.password = password;
-        this.comp_name = comp_name;
-        this.phone = phone;
-        this.webUrl = webUrl;
-        this.address = address;
-    }
 }

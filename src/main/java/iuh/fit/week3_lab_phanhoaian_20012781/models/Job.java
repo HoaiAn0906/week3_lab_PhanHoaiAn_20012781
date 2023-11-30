@@ -28,6 +28,6 @@ public class Job {
     @JoinColumn(name = "company")
     private Company company;
 
-    @OneToMany(mappedBy = "job")
+    @OneToMany(mappedBy = "job", cascade = CascadeType.ALL)
     private List<JobSkill> jobSkills = new ArrayList<>();
 }
