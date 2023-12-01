@@ -13,6 +13,9 @@ https://github.com/HoaiAn0906/week3_lab_PhanHoaiAn_20012781_frontend
 <br>
 - Đăng nhập sử dụng JWT:
 ![image](https://github.com/HoaiAn0906/week07_lab_PhanHoaiAn_20012781/assets/98022590/7c79b5ef-038f-4e9b-bb5c-bc77a2c847f3)
+- Các ứng viên khi log vào sẽ được gợi ý các công việc có skill phù hợp với mình: Propose Jobs
+
+![image](https://github.com/HoaiAn0906/week5_lab_PhanHoaiAn_20012781/assets/98022590/71e0a0e1-a675-4d52-bf8c-15b0705e3620)
 - Hiển thị các job phân trang:
 ![image](https://github.com/HoaiAn0906/week3_lab_PhanHoaiAn_20012781/assets/98022590/7ef9bbf6-97a5-4986-a773-094c1f4b74e7)
 - Tìm job phân trang:
