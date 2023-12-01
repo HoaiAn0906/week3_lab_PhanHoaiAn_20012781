@@ -40,4 +40,16 @@ public class JobResource {
     ) {
         return ResponseEntity.ok(jobService.deleteJob(id));
     }
+
+    @GetMapping("/jobs-by-skills-user")
+    public ResponseEntity<DataResponse<Page<JobResponse>>> getAllJobs(
+            @RequestParam(value = "filter[q]", defaultValue = "") String filterQ,
+            @RequestParam(value = "page", defaultValue = "1") int page,
+            @RequestParam(value = "limit", defaultValue = "20") int limit,
+            @RequestParam(value = "sortBy", defaultValue = "id") String sortBy,
+            @RequestParam(value = "sortDirection", defaultValue = "asc") String sortDirection,
+            @RequestParam(value = "email", defaultValue = "") String email
+    ) {
+        return ResponseEntity.ok(jobService.getAllJobs(filterQ, page, limit, sortBy, sortDirection, email));
+    }
 }

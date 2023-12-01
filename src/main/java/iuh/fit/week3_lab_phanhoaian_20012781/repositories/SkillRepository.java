@@ -17,5 +17,12 @@ public interface SkillRepository extends JpaRepository<Skill, Long> {
       """)
     List<Skill> findAllSkillByJob(Long jobId);
 
+    @Query(value = """
+      select s from Skill s inner join CandidateSkill ck\s
+      on s.id = ck.skill.id\s
+      where ck.candidate.id = :canId \s
+      """)
+    List<Skill> findAllSkillByCandidate(Long canId);
+
     Page<Skill> findSkillsBySkillNameContainingIgnoreCase(String skillName, Pageable pageable);
 }

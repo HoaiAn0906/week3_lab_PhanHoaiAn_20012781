@@ -62,6 +62,9 @@ public class User implements UserDetails, CredentialsContainer {
     @Column(name = "avatar", length = 255)
     private String avatar;
 
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Candidate candidate;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;
@@ -117,6 +120,7 @@ public class User implements UserDetails, CredentialsContainer {
                 ", intro='" + intro + '\'' +
                 ", profile='" + profile + '\'' +
                 ", avatar='" + avatar + '\'' +
+                ", candidate=" + candidate +
                 '}';
     }
 }
